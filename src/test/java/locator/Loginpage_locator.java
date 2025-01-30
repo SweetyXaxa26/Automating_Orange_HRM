@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import base.Setup;
 
-public class Login_page_locator {
+public class Loginpage_locator {
 
 	//locator for the login page
 	
@@ -17,6 +17,7 @@ public class Login_page_locator {
 	public By password_loc =By.name("password");
 	public  By login_btn_loc = By.xpath("//div/button[@class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button' and @type='submit']");
 
+	public By invalidMsg_loc = By.xpath("//p[text()='Invalid credentials']");
 		
 	
 }
