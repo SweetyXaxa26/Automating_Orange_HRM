@@ -6,7 +6,7 @@
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="test_case.HRM001"/>
+      <class name="testCasesExecution.TC001"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
