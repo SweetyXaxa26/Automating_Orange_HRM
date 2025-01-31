@@ -9,13 +9,14 @@ public class Dashbordpage_Object extends Dashbordpage_locator {
 	
 	public String  verifyExecute()
 	{
-		
-		String getValue = sa.verify();
+		String getValue = sa.getCurrentUrl();
 		System.out.println(getValue);
 		return getValue ;
 	}
 	
+	public void executelogout()
+	{
+		sa.clickLogOut(Dropdown, logout);
+	}
 	
-	
-
 }
