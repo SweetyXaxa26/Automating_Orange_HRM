@@ -15,6 +15,7 @@ public class Selenium_action extends Setup
 	static WebDriverWait wait = null;
 	
 	
+	
 	public void openURL(String url)
 	{
 		driver.get(url);
@@ -46,22 +47,35 @@ public class Selenium_action extends Setup
 	
 	public String  refrshlogin(By locator)
 	{
-		
 		WebElement element = driver.findElement(locator);
 		String text = element.getText();
-		return text ;
-		
+		return text ;	
 	}
 	
-	public String verify( )
+	public String getCurrentUrl()
 	{
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		  String element  = driver.getCurrentUrl();
 		  return element  ;
-	
-		
 	}
 	
+	public void  clickLogOut(By locator1 , By locator2 )
+	{
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement element1  = wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
+		Actions act = new Actions(driver);
+		act.moveToElement(element1).click().perform();	
+		
+		WebElement element2  = wait.until(ExpectedConditions.visibilityOfElementLocated(locator2));
+		act.moveToElement(element2).click().perform();	
+	}
+	
+	public void clickForgotPasswowrd(By locator)
+	{
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement element  = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		Actions act = new Actions(driver);
+		act.moveToElement(element).click().perform();	
+	}
 	
 	
 	

@@ -23,7 +23,6 @@ public class Loginpage_Object extends Loginpage_locator
 		
 	  public void executeLoginInvalidCredencial()
 	  {
-		 
 		  sa.enterUsername( username_loc, value_TextUserInvalid);
 		  sa.enterPassword(password_loc, value_TextpassInvalid );
 		  sa.clicklogin(login_btn_loc);
@@ -31,5 +30,13 @@ public class Loginpage_Object extends Loginpage_locator
 		  System.out.println("Message : "+ text );
 	  }
 	
+	  public String  verifyLogoutFunctionality()
+	  {
+
+			String url = sa.getCurrentUrl();
+			System.out.println("Curent Url : "+ url );  
+			return url ;
+			
+	  }
 
 }

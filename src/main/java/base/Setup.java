@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -52,6 +53,7 @@ public class Setup implements ITestListener{
 	 		//Implicit wait 
 	     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 			driver.manage().window().maximize();
+			
 	    	
 	       
 			
